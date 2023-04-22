@@ -4,4 +4,4 @@ This is my personal photography portfolio, built with ReactJS. There isn't an aw
 
 There are a series of pages, including a Portfolio page and a Contact form which uses PHPMail to send me an email.
 
-<a target="_blank" href="photography.benmassey.co.uk">photography.benmassey.co.uk</a>
+<a target="_blank" href="https://www.photography.benmassey.co.uk">photography.benmassey.co.uk</a>
