@@ -1,0 +1,26 @@
+.selectService {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectLabel {
+  margin-bottom: 10px;
+  width: 100%;
+  color: grey;
+}
+
+.formSelect {
+  font-family: 'Nanum Myeongjo', serif;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .selectService {
+    width: 70%;
+  }
+}

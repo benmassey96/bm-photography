@@ -1,0 +1,33 @@
+.input {
+  color: rgb(90, 90, 90);
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.label {
+  color: grey;
+  align-self: flex-start;
+}
+
+.inputContainer, .textArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textArea label {
+  margin-bottom: 10px;
+}
+
+.input, .textArea textarea {
+  padding: 10px;
+  font-family: 'Nanum Myeongjo', serif;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .inputContainer, .textArea {
+    width: 70%;
+  }
+}
