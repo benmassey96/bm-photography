@@ -1,25 +1,22 @@
-import { Fragment, useLayoutEffect } from "react";
-import Header from "./Header";
-import Footer from "./UI/Footer";
-import HomeGrid from "./HomeGrid";
+import { Fragment } from "react";
+import Image from "./UI/Image";
+import imageList from "../images/imageList";
 import Nav from "./UI/Nav";
-import Spinner from "./UI/Spinner";
 
 const Home = () => {
-
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-  });
-
   return (
     <>
-      <Spinner />
       <Nav />
-      <Header />
-      <HomeGrid />
-      <Footer />
+      
+      <main>
+        <div>
+          {imageList.map((image, index) => (
+            <Image key={index} src={image} alt={image} />
+          ))}
+        </div>
+      </main>
     </>
-  );
-};
+  )
+}
 
 export default Home;

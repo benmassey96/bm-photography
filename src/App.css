@@ -4,17 +4,6 @@
 
 body {
   margin: 0;
-  font-family: 'Nanum Myeongjo', serif;
-}
-
-h2 {
-  font-size: 4em;
-  margin-bottom: 50px;
-  mix-blend-mode: difference;
-}
-
-p {
-  font-family: 'Bitter', serif;
-  letter-spacing: 0.5px;
-  line-height: 1.7;
+  padding: 0 5px;
+  font-family: 'Mulish', sans-serif;
 }

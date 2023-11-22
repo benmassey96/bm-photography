@@ -1,0 +1,11 @@
+.likeButton {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.318);
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+}
