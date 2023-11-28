@@ -1,0 +1,26 @@
+.mobileHeader {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 20px;
+  background-color: white;
+  z-index: 1;
+}
+
+.headerLogo {
+  position: relative;
+  z-index: 1;
+}
+
+.headerLogo:hover {
+  animation: headerLogoSpin 0.5s ease;
+}
+
+@keyframes headerLogoSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

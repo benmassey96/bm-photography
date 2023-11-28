@@ -1,0 +1,24 @@
+.positionFixed {
+  position: fixed;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 10% 10% 10% 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
+
+.mobileNav a {
+  text-decoration: none;
+  font-size: xx-large;
+  color: black;
+}

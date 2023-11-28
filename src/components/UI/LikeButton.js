@@ -19,6 +19,9 @@ const LikeButton = () => {
       style={liked ? {color: "#A80000",} : {color: "#000000"}}
       className={styles.likeButton}
       onClick={onLikeHandler}
+      data-aos="fade-up"
+      data-aos-delay="50"
+      data-aos-duration="1000"
     />
   )
 }

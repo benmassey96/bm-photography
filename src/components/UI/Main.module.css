@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
+
+.main h2 {
+  align-self: self-start;
+}
