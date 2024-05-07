@@ -6,17 +6,3 @@ body {
   margin: 0;
   font-family: 'Mulish', sans-serif;
 }
-
-h2, p {
-  letter-spacing: 1px;
-  padding: 0 20px;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-p {
-  margin-bottom: 1em;
-  line-height: 1.5em;
-}

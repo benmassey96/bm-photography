@@ -1,3 +1,114 @@
-.about {
-  padding: 20px;
+.aboutInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.aboutInfo:first-of-type {
+  margin: 2em 0 0 0;
+}
+
+.aboutInfoImage {
+  margin: 1.5em 0;
+  align-self: center;
+  max-width: 100%;
+}
+
+.aboutParagraph {
+  margin-top: 2em;
+}
+
+.aboutBonusPics {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 3em 0;
+}
+
+.aboutImage {
+  max-width: 50%;
+}
+
+.aboutInfo p::first-letter, .aboutParagraph::first-letter, .moreAboutHeader {
+  initial-letter: 2;
+  font-family: "Playfair Display", serif;
+  padding-right: 10px;
+}
+
+.moreAboutHeader {
+  font-size: 3em;
+  padding: 0;
+}
+
+.moreAboutList {
+  list-style-type: circle;
+  padding: 0 30px;
+}
+
+.moreAboutItem {
+  padding: 2em 0;
+  line-height: 1.5;
+}
+
+@media only screen and (min-width: 600px) {
+  .about {
+    padding: 10%;
+  }
+
+  .aboutInfo {
+    flex-direction: row;
+  }
+
+  .aboutInfoImage {
+    width: 40%;
+    object-fit: cover;
+    margin: auto;
+  }
+
+  .aboutInfo p {
+    margin: 30px;
+    padding: 30px;
+  }
+
+  .aboutParagraph {
+    padding-left: 30px;
+  }
+
+  .moreAboutItem {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .aboutInfo p {
+    align-self: center;
+  }
+
+  .moreAboutHeader {
+    margin-top: 3em;
+    text-align: center;
+  }
+
+  .moreAboutList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3em;
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  .moreAboutItem {
+    width: 50%;
+    padding: 10%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .aboutImage {
+    max-width: 50%;
+  }
+
+  .aboutBonusPics {
+    margin-bottom: 5em;
+  }
 }

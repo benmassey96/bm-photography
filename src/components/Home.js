@@ -1,47 +1,60 @@
 import { Fragment, useLayoutEffect } from "react";
-import Image from "./UI/Image";
 import Header from "./UI/Header";
-import Main from "./UI/Main";
-import imageList from "../images/imageList";
 import Footer from "./UI/Footer";
+import styles from "./Home.module.css";
+import penyfan_desktop from "../images/penyfan_desktop.jpg";
 
-const Home = () => {
+const Home = props => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   });
 
-  const shuffleImages = imageList => {
-    let currentIndex = imageList.length, randomIndex;
+  const columnLength = Math.ceil(props.imageList.length / 4);
 
-    // While there are remaining elements to shuffle.
-    while (currentIndex > 0) {
-
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-
-      // And swap it with the current element.
-      [imageList[currentIndex], imageList[randomIndex]] = [imageList[randomIndex], imageList[currentIndex]];
-    }
-    
-    return imageList;
-  }
-
-  const shuffledImages = shuffleImages(imageList);
+  const columns = Array.from( {length: columnLength }, (v, i) => 
+    props.imageList.slice(i * columnLength, i * columnLength + columnLength)
+  );
 
   return (
     <>
       <Header />
-      
-      <Main>
-        <div>
-          {
-            imageList.map((image, index) => (
-            <Image key={index} src={shuffledImages[index]} alt={image} />
-          ))
-          }
+
+
+      <div className={styles.home}>
+        <div className={styles.hero}>
+          <img className={styles.heroImage} src={penyfan_desktop} alt="Pen y Fan" />
+
+          <div className={styles.heroImageBack}></div>
+          <h1 className={styles.heroHeader}>Hi, I'm <span className={styles.headerSpan}>Ben</span>.<br/>All purpose <span className={styles.headerSpan}>photographer</span> located in <span className={styles.headerSpan}>Herefordshire</span></h1>
         </div>
-      </Main>
+
+        <div className={styles.gallery}>
+          <h2 className={styles.galleryHeader}>Gallery</h2>
+        </div>
+
+        <div className={styles.homeImages}>
+          <div className={styles.column}>
+          { columns[0] }
+          </div>
+
+          <div className={styles.column}>
+          { columns[1] }
+          </div>
+
+          <div className={styles.column}>
+            { columns[2] }
+          </div>
+
+          <div className={styles.column}>
+            { columns[3] }
+          </div>
+        </div>
+
+
+        <div className={styles.mobileHomeImages}>
+          { props.imageList }
+        </div>
+      </div>
 
       <Footer />
     </>

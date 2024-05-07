@@ -1,0 +1,22 @@
+.sectionHeader {
+    letter-spacing: 1px;
+    font-size: 3em;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+}
+
+@media only screen and (min-width: 600px) {
+    .sectionHeader {
+        font-size: 4em;
+    }
+
+    .sectionHeader {
+        padding-left: 60px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .sectionHeader {
+        margin-bottom: 0.5em;
+    }
+}

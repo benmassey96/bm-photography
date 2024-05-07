@@ -1,11 +1,11 @@
-import LikeButton from './LikeButton';
 import styles from './Image.module.css';
 
 const Image = props => {
   return (
-    <div className={styles.imgContainer}>
+    // className={`${styles[props.dimensions]}`}
+    <div className={styles.homeImageContainer}>
       <img 
-        key={props.key} 
+        key={props.key}
         src={props.src} 
         alt={props.alt}
         className={styles.img}
@@ -13,7 +13,6 @@ const Image = props => {
         data-aos-delay="50"
         data-aos-duration="1000"
       />
-      <LikeButton />
     </div>
   )
 }

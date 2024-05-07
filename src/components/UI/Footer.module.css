@@ -42,3 +42,37 @@ footer {
   padding: 0;
   font-size: smaller;
 }
+
+@media only screen and (min-width : 768px) {
+  .footerContent {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footerContent a {
+    text-align: end;
+  }
+
+  .connectInsta h4, .connectInsta a {
+    text-align: start;
+    padding: 0;
+  }
+
+  .footerContent h4, .footerContent ul {
+    margin: 0;
+  }
+
+  .footerContent div, .footerContent .contactLink, .footerContent ul {
+    padding: 0 10px;
+    width: 30%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  footer {
+    margin: 5% auto 1em auto;
+  }
+}

@@ -26,6 +26,15 @@ const Nav = () => {
           </ul>
         }
         <NavButton onShowNav={showNavHandler} toggled={showNav} />
+      </nav>
+
+      <nav className={styles.desktopNavContainer}>
+        <ul id="desktopNav" className={styles.desktopNav}>
+          <Link onClick={onNavLinkClick} to="/">Home</Link>
+          <Link onClick={onNavLinkClick} to="/about">About</Link>
+          <Link onClick={onNavLinkClick} to="/services">Services</Link>
+          <Link onClick={onNavLinkClick} to="/contact">Contact</Link>
+        </ul>
       </nav> 
     </>
   )

@@ -5,7 +5,7 @@ import Nav from './Nav';
 
 const Header = () => {
   return (
-    <header className={styles.mobileHeader}>
+    <header className={styles.header}>
       <Link to="/"> <img className={styles.headerLogo} src={logo} alt="Ben Massey Photography Logo" /> </Link>
 
       <Nav />
