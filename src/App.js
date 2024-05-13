@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from './components/Home';
@@ -8,6 +9,15 @@ import Image from "./components/UI/Image";
 import imageList from './utils/imageList';
 
 function App() {
+  const [modal, setModal] = useState(
+    { 
+      "show" : false
+    });
+  
+  const onImageSelect = image => {
+    setShowModal(true)
+  }
+
   const shuffleImages = imageList => {
     let currentIndex = imageList.length, randomIndex;
 
@@ -28,7 +38,7 @@ function App() {
   const shuffledImages = shuffleImages(imageList);
 
   const homeImages = shuffledImages.map((image) => (
-    <Image key={image.id} src={image.src} category={image.category} alt={image.src} dimensions={image.dimensions} />
+    <Image onImageSelect={onImageSelect} key={image.id} src={image.src} category={image.category} alt={image.src} dimensions={image.dimensions} />
   ));
 
   return (

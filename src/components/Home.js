@@ -9,20 +9,16 @@ import GalleryFilter from "./UI/GalleryFilter";
 
 const Home = props => {
   const [imageList, setImageList] = useState(props.imageList);
-  const [galleryFilter, setGalleryFilter] = useState();
+  const [galleryFilter, setGalleryFilter] = useState("All");
+  const [showModal, setShowModal] = useState(false);
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   });
 
   const filterGallery = category => {
-    setGalleryFilter(category)
-
-    console.log(`${galleryFilter} images showing`)
-    
     if(category === "All") {
-      console.log("All")
-      return props.imageList
+      return setImageList(props.imageList)
     } 
     else {
       setImageList(props.imageList.filter((image) => {
@@ -32,7 +28,7 @@ const Home = props => {
   };
 
   useEffect(() => {
-    console.log(galleryFilter)
+    filterGallery(galleryFilter)
   }, [galleryFilter])
 
   return (
@@ -50,7 +46,7 @@ const Home = props => {
         <div className={styles.gallery}>
           <h2 className={styles.galleryHeader}>Gallery</h2>
 
-          <GalleryFilter onFilterSelect={filterGallery} services={services} />
+          <GalleryFilter onFilterSelect={setGalleryFilter} services={services} />
           
           <div>
             {imageList}

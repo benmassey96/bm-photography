@@ -78,6 +78,7 @@ import cross_stitch from '../images/stitch.jpg';
 import vault_city from '../images/vault.jpg';
 import york_terrace from '../images/york_terrace.jpg';
 import sugar_loaf from '../images/sugar_loaf.jpg';
+import lewis_portrait from '../images/lewis_portrait.jpg';
 
 const imageList = [
   { id: 1, src: barking_mad_1, category: "Product", dimensions: "square" },
@@ -159,7 +160,8 @@ const imageList = [
   { id: 77, src: vault_city, category: "Small Business", dimensions: "square" },
   { id: 78, src: cross_stitch, category: "Small Business", dimensions: "horizontal"},
   { id: 79, src: york_terrace, category: "Fun", dimensions: "horizontal"},
-  { id: 80, src: sugar_loaf, category: "Fun", dimensions: "horizontal"}
+  { id: 80, src: sugar_loaf, category: "Fun", dimensions: "horizontal"},
+  { id: 81, src: lewis_portrait, category: "Portraits", dimensions: "horizontal"}
 ];
 
 export default imageList;
