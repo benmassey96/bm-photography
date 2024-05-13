@@ -7,7 +7,7 @@ const Image = props => {
       data-aos="fade-up"
       data-aos-delay="50"
       data-aos-duration="1000"
-      onClick={props.onImageSelect}
+      onClick={props.onImageClick}
     >
       <div className={styles.gallery}>
         <img src={props.src} alt={props.alt}/>

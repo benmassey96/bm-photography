@@ -6,15 +6,15 @@ import styles from "./Home.module.css";
 import services from "../utils/services";
 import penyfan_desktop from "../images/penyfan_desktop.jpg";
 import GalleryFilter from "./UI/GalleryFilter";
+import Modal from "./UI/Modal";
 
 const Home = props => {
   const [imageList, setImageList] = useState(props.imageList);
   const [galleryFilter, setGalleryFilter] = useState("All");
-  const [showModal, setShowModal] = useState(false);
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-  });
+  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0)
+  // });
 
   const filterGallery = category => {
     if(category === "All") {
@@ -33,6 +33,7 @@ const Home = props => {
 
   return (
     <>
+      {props.modal.show && <Modal src={props.modal.image_src} alt={props.modal.image_alt} closeModal={props.closeModal} />}
       <Header />
 
       <div className={styles.home}>
