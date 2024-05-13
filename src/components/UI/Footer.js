@@ -17,8 +17,8 @@ const Footer = () => {
       <div className={styles.footerContent}>
         <div className={styles.connectInsta}>
           <h4>
-          <a href="https://www.facebook.com/share/7ppc5GuhJm4BpCrG/"><FontAwesomeIcon icon={faInstagram} /> benmasseyphotos</a><br/>
-          <a href="https://www.instagram.com/benmasseyphotos/"><FontAwesomeIcon icon={faFacebook} /> benmasseyphotos</a>
+          <a target="_blank" href="https://www.instagram.com/benmasseyphotos/"><FontAwesomeIcon icon={faInstagram} /> benmasseyphotos</a><br/>
+          <a target="_blank" href="https://www.facebook.com/share/7ppc5GuhJm4BpCrG/"><FontAwesomeIcon icon={faFacebook} /> benmasseyphotos</a>
           </h4>
         </div>
 
