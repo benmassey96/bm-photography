@@ -1,24 +1,43 @@
-import { Fragment, useLayoutEffect } from "react";
+import { Fragment, useEffect, useLayoutEffect } from "react";
+import { useState } from "react";
 import Header from "./UI/Header";
 import Footer from "./UI/Footer";
 import styles from "./Home.module.css";
+import services from "../utils/services";
 import penyfan_desktop from "../images/penyfan_desktop.jpg";
+import GalleryFilter from "./UI/GalleryFilter";
 
 const Home = props => {
+  const [imageList, setImageList] = useState(props.imageList);
+  const [galleryFilter, setGalleryFilter] = useState();
+
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   });
 
-  const columnLength = Math.ceil(props.imageList.length / 4);
+  const filterGallery = category => {
+    setGalleryFilter(category)
 
-  const columns = Array.from( {length: columnLength }, (v, i) => 
-    props.imageList.slice(i * columnLength, i * columnLength + columnLength)
-  );
+    console.log(`${galleryFilter} images showing`)
+    
+    if(category === "All") {
+      console.log("All")
+      return props.imageList
+    } 
+    else {
+      setImageList(props.imageList.filter((image) => {
+        return image.props.category === category
+      }))
+    }
+  };
+
+  useEffect(() => {
+    console.log(galleryFilter)
+  }, [galleryFilter])
 
   return (
     <>
       <Header />
-
 
       <div className={styles.home}>
         <div className={styles.hero}>
@@ -30,29 +49,12 @@ const Home = props => {
 
         <div className={styles.gallery}>
           <h2 className={styles.galleryHeader}>Gallery</h2>
-        </div>
 
-        <div className={styles.homeImages}>
-          <div className={styles.column}>
-          { columns[0] }
+          <GalleryFilter onFilterSelect={filterGallery} services={services} />
+          
+          <div>
+            {imageList}
           </div>
-
-          <div className={styles.column}>
-          { columns[1] }
-          </div>
-
-          <div className={styles.column}>
-            { columns[2] }
-          </div>
-
-          <div className={styles.column}>
-            { columns[3] }
-          </div>
-        </div>
-
-
-        <div className={styles.mobileHomeImages}>
-          { props.imageList }
         </div>
       </div>
 

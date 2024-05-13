@@ -50,6 +50,34 @@ import spouse_5 from '../images/spouse_5.jpg';
 import spouse_6 from '../images/spouse_6.jpg';
 import spouse_7 from '../images/spouse_7.jpg';
 import tenby_gin from '../images/tenby_gin.jpg';
+import josh_cally_1 from '../images/cally_josh_1.jpg';
+import josh_cally_2 from '../images/cally_josh_2.jpg';
+import josh_cally_3 from '../images/cally_josh_3.jpg';
+import josh_cally_4 from '../images/cally_josh_4.jpg';
+import josh_cally_5 from '../images/cally_josh_5.jpg';
+import josh_cally_6 from '../images/cally_josh_6.jpg';
+import josh_cally_7 from '../images/cally_josh_7.jpg';
+import josh_cally_8 from '../images/cally_josh_8.jpg';
+import josh_cally_9 from '../images/cally_josh_9.jpg';
+import josh_cally_10 from '../images/cally_josh_10.jpg';
+import josh_cally_11 from '../images/cally_josh_11.jpg';
+import josh_cally_12 from '../images/cally_josh_12.jpg';
+import josh_cally_13 from '../images/cally_josh_13.jpg';
+import josh_cally_14 from '../images/cally_josh_14.jpg';
+import josh_cally_15 from '../images/cally_josh_15.jpg';
+import josh_cally_16 from '../images/cally_josh_16.jpg';
+import josh_cally_17 from '../images/cally_josh_17.jpg';
+import josh_cally_18 from '../images/cally_josh_18.jpg';
+import josh_cally_19 from '../images/cally_josh_19.jpg';
+import josh_cally_20 from '../images/cally_josh_20.jpg';
+import trac_dig from '../images/trac_dig.jpg';
+import roti_1 from '../images/roti_1.jpg';
+import roti_2 from '../images/roti_2.jpg';
+import roti_3 from '../images/roti_3.jpg';
+import cross_stitch from '../images/stitch.jpg';
+import vault_city from '../images/vault.jpg';
+import york_terrace from '../images/york_terrace.jpg';
+import sugar_loaf from '../images/sugar_loaf.jpg';
 
 const imageList = [
   { id: 1, src: barking_mad_1, category: "Product", dimensions: "square" },
@@ -96,14 +124,42 @@ const imageList = [
   { id: 42, src: jack_1, category: "Pets", dimensions: "vertical" }, 
   { id: 43, src: jack_2, category: "Pets", dimensions: "vertical" }, 
   { id: 44, src: lindt_1, category: "Events", dimensions: "horizontal" }, 
-  { id: 45, src: lindt_2, category: "Pets", dimensions: "horizontal" }, 
-  { id: 46, src: spouse_1, category: "Intimate", dimensions: "horizontal" }, 
-  { id: 47, src: spouse_2, category: "Intimate", dimensions: "square" }, 
-  { id: 48, src: spouse_3, category: "Intimate", dimensions: "square" }, 
-  { id: 49, src: spouse_4, category: "Intimate", dimensions: "horizontal" }, 
-  { id: 50, src: spouse_5, category: "Intimate", dimensions: "square" }, 
-  { id: 51, src: spouse_6, category: "Intimate", dimensions: "horizontal" }, 
-  { id: 52, src: spouse_7, category: "Intimate", dimensions: "square" }
+  { id: 45, src: lindt_2, category: "Events", dimensions: "horizontal" }, 
+  { id: 46, src: spouse_1, category: "Personalised", dimensions: "horizontal" }, 
+  { id: 47, src: spouse_2, category: "Personalised", dimensions: "square" }, 
+  { id: 48, src: spouse_3, category: "Personalised", dimensions: "square" }, 
+  { id: 49, src: spouse_4, category: "Personalised", dimensions: "horizontal" }, 
+  { id: 50, src: spouse_5, category: "Personalised", dimensions: "square" }, 
+  { id: 51, src: spouse_6, category: "Personalised", dimensions: "horizontal" }, 
+  { id: 52, src: spouse_7, category: "Personalised", dimensions: "square" },
+  { id: 53, src: josh_cally_1, category: "Weddings", dimensions: "portrait" },
+  { id: 54, src: josh_cally_2, category: "Weddings", dimensions: "horizontal" },
+  { id: 55, src: josh_cally_3, category: "Weddings", dimensions: "portrait" },
+  { id: 56, src: josh_cally_4, category: "Weddings", dimensions: "horizontal" },
+  { id: 57, src: josh_cally_5, category: "Weddings", dimensions: "horizontal" },
+  { id: 58, src: josh_cally_6, category: "Weddings", dimensions: "horizontal" },
+  { id: 59, src: josh_cally_7, category: "Weddings", dimensions: "horizontal" },
+  { id: 60, src: josh_cally_8, category: "Weddings", dimensions: "portrait" },
+  { id: 61, src: josh_cally_9, category: "Weddings", dimensions: "horizontal" },
+  { id: 62, src: josh_cally_10, category: "Weddings", dimensions: "square" },
+  { id: 63, src: josh_cally_11, category: "Weddings", dimensions: "horizontal" },
+  { id: 64, src: josh_cally_12, category: "Weddings", dimensions: "horizontal" },
+  { id: 65, src: josh_cally_13, category: "Weddings", dimensions: "horizontal" },
+  { id: 66, src: josh_cally_14, category: "Weddings", dimensions: "portrait" },
+  { id: 67, src: josh_cally_15, category: "Weddings", dimensions: "horizontal" },
+  { id: 68, src: josh_cally_16, category: "Weddings", dimensions: "horizontal" },
+  { id: 69, src: josh_cally_17, category: "Weddings", dimensions: "horizontal" },
+  { id: 70, src: josh_cally_18, category: "Weddings", dimensions: "horizontal" },
+  { id: 71, src: josh_cally_19, category: "Weddings", dimensions: "portrait" },
+  { id: 72, src: josh_cally_20, category: "Weddings", dimensions: "horizontal" },
+  { id: 73, src: trac_dig, category: "Pets", dimensions: "square" },
+  { id: 74, src: roti_1, category: "Small Business", dimensions: "horizontal" },
+  { id: 75, src: roti_2, category: "Small Business", dimensions: "horizontal" },
+  { id: 76, src: roti_3, category: "Small Business", dimensions: "horizontal" },
+  { id: 77, src: vault_city, category: "Small Business", dimensions: "square" },
+  { id: 78, src: cross_stitch, category: "Small Business", dimensions: "horizontal"},
+  { id: 79, src: york_terrace, category: "Fun", dimensions: "horizontal"},
+  { id: 80, src: sugar_loaf, category: "Fun", dimensions: "horizontal"}
 ];
 
 export default imageList;

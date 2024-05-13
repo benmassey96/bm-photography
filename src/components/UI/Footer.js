@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import logo from '../../images/shutter-open-24.png';
 
 const Footer = () => {
@@ -16,7 +16,10 @@ const Footer = () => {
 
       <div className={styles.footerContent}>
         <div className={styles.connectInsta}>
-          <h4>Connect with me on Instagram! <br/><a href="https://www.instagram.com/benmasseyphotos/"><FontAwesomeIcon icon={faInstagram} /> benmasseyphotos</a></h4>
+          <h4>
+          <a href="https://www.facebook.com/share/7ppc5GuhJm4BpCrG/"><FontAwesomeIcon icon={faInstagram} /> benmasseyphotos</a><br/>
+          <a href="https://www.instagram.com/benmasseyphotos/"><FontAwesomeIcon icon={faFacebook} /> benmasseyphotos</a>
+          </h4>
         </div>
 
         <a className={styles.contactLink} href="mailto:hello@benmassey.co.uk">hello@benmassey.co.uk</a>

@@ -3,6 +3,8 @@ import spouse from '../images/service_thumbnails/spouse_6.jpg';
 import product from '../images/service_thumbnails/barking_mad_2.jpg';
 import events from '../images/service_thumbnails/hfd_comicon_5.jpg';
 import pet from '../images/service_thumbnails/jack_2.jpg';
+import portrait from '../images/service_thumbnails/family_portrait.jpg';
+import weddings from '../images/service_thumbnails/weddings.jpg';
 
 const services = [
   {
@@ -14,8 +16,8 @@ const services = [
   },
 
   {
-    "id": "intimate",
-    "name": "Small / Intimate Shoots",
+    "id": "personalised",
+    "name": "Personalised",
     "description": "Sometimes, the most meaningful moments happen in small, intimate settings. Whether it's a couple's session, a family gathering, or a personal portrait for a new socials profile picture, I offer a relaxed and personalized approach to capture the essence of your unique story. These sessions are ideal for creating timeless images that reflect the true spirit of your relationships.",
     "includes": ["Personalized photo session", "Location of your choice", "Edited high-resolution images"],
     "image": spouse
@@ -23,7 +25,7 @@ const services = [
 
   {
     "id": "product",
-    "name": "Product Photography",
+    "name": "Product",
     "description": "Elevate your brand with stunning product imagery. Whether you're a small business owner or a creative entrepreneur, I offer professional product photography services to showcase your products in the best light. From detailed close-ups to lifestyle shots, I work to highlight the unique features and craftsmanship of your offerings.",
     "includes": ["Studio setup or on-location product shoot", "High-quality, edited images", "Customized styling and composition"],
     "image": product
@@ -44,7 +46,23 @@ const services = [
     "description": "Our furry friends hold a special place in our hearts, and capturing their playful spirit is a joy. From energetic action shots to endearing portraits, I specialize in pet photography that showcases the unique personality of your beloved pets. Let's create lasting memories that celebrate the joy and companionship they bring into your life.",
     "includes": ["On-location pet photo session", "Candid and posed shots", "Edited high-resoultion images"],
     "image": pet
-  }
+  },
+
+  {
+    "id": "portraits",
+    "name": "Portraits",
+    "description": "",
+    "includes": ["On-location pet photo session", "Candid and posed shots", "Edited high-resoultion images"],
+    "image": portrait
+  },
+
+  {
+    "id": "weddings",
+    "name": "Weddings",
+    "description": "",
+    "includes": ["Packages vary. Get in touch for more information"],
+    "image": weddings
+  },
 ];
 
 export default services;

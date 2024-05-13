@@ -3,11 +3,9 @@ import './App.css';
 import Home from './components/Home';
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Service from "./components/Service";
 import Services from "./components/Services";
 import Image from "./components/UI/Image";
 import imageList from './utils/imageList';
-import services from './utils/services';
 
 function App() {
   const shuffleImages = imageList => {
@@ -30,7 +28,7 @@ function App() {
   const shuffledImages = shuffleImages(imageList);
 
   const homeImages = shuffledImages.map((image) => (
-    <Image key={image.id} src={image.src} alt={image.src} dimensions={image.dimensions} />
+    <Image key={image.id} src={image.src} category={image.category} alt={image.src} dimensions={image.dimensions} />
   ));
 
   return (
@@ -40,9 +38,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services imageList={imageList} />} />
         <Route path="/contact" element={<Contact />} />
-        {services.map((service) => {
-          return <Route path={`/${service.id}`} element={<Service service={service} />}/>
-        })}
       </Routes>
     </BrowserRouter>
   );

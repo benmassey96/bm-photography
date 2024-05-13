@@ -1,6 +1,4 @@
 import { Fragment, useLayoutEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Header from "./UI/Header";
 import Main from "./UI/Main";
 import Footer from "./UI/Footer";

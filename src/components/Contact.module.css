@@ -1,3 +1,7 @@
+.contact {
+  padding: 20px 0 0 0;
+}
+
 .contactLink {
   display: block;
   padding: 0;
@@ -27,6 +31,7 @@
   .contact {
     display: flex;
     flex-direction: row;
+    padding: 50px 0 0 60px;
   }
 
   .contactLink {
