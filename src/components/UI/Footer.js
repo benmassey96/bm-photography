@@ -15,7 +15,7 @@ const Footer = () => {
       <Link to="/"> <img className={styles.footerLogo} src={logo} alt="Ben Massey Photography Logo" /> </Link>
 
       <div className={styles.footerContent}>
-        <div className={styles.connectInsta}>
+        <div className={styles.connectSocials}>
           <h4>
           <a target="_blank" href="https://www.instagram.com/benmasseyphotos/"><FontAwesomeIcon icon={faInstagram} /> benmasseyphotos</a><br/>
           <a target="_blank" href="https://www.facebook.com/share/7ppc5GuhJm4BpCrG/"><FontAwesomeIcon icon={faFacebook} /> benmasseyphotos</a>

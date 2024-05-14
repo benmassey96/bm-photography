@@ -75,8 +75,9 @@
 
 .reference {
   width: 30%;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
+  word-wrap: break-word;
 }
 
 @media only screen and (min-width: 600px) {
@@ -109,6 +110,6 @@
 
   .reference {
     font-size: 1.5em;
-    padding: 5em 30px;
+    padding: 3em 30px;
   }
 }

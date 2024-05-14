@@ -26,9 +26,12 @@ footer {
   margin: 0 auto;
 }
 
-.connectInsta {
+.connectSocials {
   margin-bottom: 5px;
-  font-weight: normal;
+}
+
+.connectSocials h4 a {
+  font-weight: lighter;
 }
 
 .footerNav {
@@ -55,7 +58,7 @@ footer {
     text-align: end;
   }
 
-  .connectInsta h4, .connectInsta a {
+  .connectSocials h4, .connectSocials a {
     text-align: start;
     padding: 0;
   }
