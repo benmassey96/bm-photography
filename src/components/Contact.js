@@ -23,8 +23,9 @@ const Contact = () => {
 
             <p>Feel free to reach out, chances are I'm eagerly awaiting your message. Enquiries are on a totally no-obligation basis</p>
 
-            <a className={styles.contactLink} href="mailto:hello@benmasseyphotos.co.uk">hello@benmassey.co.uk</a>
-            <a className={styles.contactLink} href="https://www.instagram.com/benmasseyphotos/">Say Hi on Insta</a>
+            <a className={styles.contactLink} target="_blank" href="mailto:hello@benmasseyphotos.co.uk?subject=Photography Enquiry">hello@benmasseyphotos.co.uk</a>
+            <a className={styles.contactLink} target="_blank" href="https://www.instagram.com/benmasseyphotos/">Say Hi on Insta</a>
+            <a className={styles.contactLink} target="_blank" href="https://www.facebook.com/share/7ppc5GuhJm4BpCrG/">Take a look at my Facebook</a>
           </div>
           
           <div className={styles.mapContainer}>
