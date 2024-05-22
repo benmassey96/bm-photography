@@ -1,15 +1,25 @@
-main {
-  padding: 50px 25px;
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 25% 20px;
+  text-align: justify;
 }
 
-@media screen and (min-width: 768px) {
-  main {
-    padding: 10% 15%;
+@media only screen and (min-width : 600px) {
+  .main {
+    max-width: 100%;
+    padding: 10% 5%;
+  }
+
+  .main p {
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    line-height: 1.5;
   }
 }
 
-@media screen and (min-width: 1098px) {
-  main {
-    padding: 5% 25%;
+@media only screen and (min-width : 768px) {
+  .main {
+    padding: 10% 15%;
   }
 }

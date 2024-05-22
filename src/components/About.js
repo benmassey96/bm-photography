@@ -1,59 +1,89 @@
 import { Fragment, useLayoutEffect } from "react";
-import { Link } from "react-router-dom";
-import Nav from "./UI/Nav";
+import Header from "./UI/Header";
 import Main from "./UI/Main";
-import b3 from '../images/b3.jpg';
-import b5 from '../images/b5.JPG';
-import './About.css';
-import Spinner from "./UI/Spinner";
 import Footer from "./UI/Footer";
+import SectionHeader from "./UI/SectionHeader";
+import ben from "../images/ben.jpg";
+import ben_and_obi from "../images/ben_obi.jpg";
+import ben_candid from "../images/ben_two.jpg";
+import cologne from "../images/cologne.jpg";
+import penyfan_desktop from "../images/penyfan_desktop.jpg";
+import obi from "../images/obi_fence.JPG";
+import dubrovnik from "../images/dubrovnik.jpg"
+import styles from './About.module.css';
 
 const About = () => {
-
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   });
 
+  const moreAboutItems = [
+    "I'm a huge Star Wars fan. The prequels are my favourite. Don't judge.",
+    "I love German culture, and have been trying to learn the language for some time. Currently on a 1,500+ day streak on Duolingo!",
+    "You'll often find me gazing up into the sky on a clear night. Astronomy fascinates me and I have recently tried my hand at astrophotography."
+  ]
+  
   return (
     <>
-      <Spinner />
-      <Nav />
-      <img className="benBackground" alt="Ben" src={b5}/>
-      <Main>
-        <h2>About</h2>
-        <p>Hi, I'm Ben and I'm from Hereford.</p>
+      <Header />
 
-        <h3>What I shoot</h3>
-        <p>I'm passionate about capturing beautiful images, regardless of what the subject or project is. To give you an idea of what I've shot before, or would like to shoot in the future...</p>
+      <Main className={styles.about} >
+        <SectionHeader>About Ben</SectionHeader>
 
-        <ul className="servicesList">
-          <li>Product</li>
-          <li>Pet</li>
-          <li>Automotive</li>
-          <li>Venues</li>
-          <li>Portraits</li>
-          <li>Events</li>
-          <li>Family</li>
-          <li>Weddings</li>
-        </ul>
+        <div className={styles.aboutInfo} data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
+          <p className={styles.aboutParagraph}>
+            I'm Ben, a budding amateur photographer able to suit any project you have in mind.
+            <br/><br/>
+            I've dabbled in a wide range of genres and styles of photography, from candid styles like street, to events, products, pets, family portraits. Recently I shot my first wedding as a solo shooter. I guess you could say I'm a jack of all styles!
+            <br/><br/>
+            Bottom line is, there isn't a style/genre that I've explored and not enjoyed, so whatever you have in mind, I'm here for it.
+          </p>
 
-        <h3>Photography and me</h3>
-        <p>Photography started for me going back when I was 19, mainly on my phone until I got my first "proper" camera, a Sony DSC H400. From then it was mostly travel photography. Now, my portfolio has grown and my equipment upgraded along with it.</p>
+          <img className={styles.aboutInfoImage} alt="Ben" src={ben} />
+        </div>
 
-        <p>I started a <a href="https://www.instagram.com/beer_in_mass/" target="_blank" rel="noreferrer">craft beer blog</a> on Instagram, taking pictures of the cool artwork you see oh-so-often with craft beer, tagging the breweries. I managed to gain a small following and recognition from breweries, local and afar; Odyssey Brewery Co., Wild Beer Company and Lucky 7 brewery, to name a few.</p>
 
-        <p>I've since taken pictures for a number of venues and events, local and afar. I've also shot for friends and family on various different things, from pet to parties etc. Check out my <Link to="/portfolio">portfolio</Link>.</p>
+        <div className={styles.aboutInfo} data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
+          <img className={styles.aboutInfoImage} alt="Ben" src={ben_candid} />
 
-        <p>I'm quite active on <a href='https://www.instagram.com/benmasseyphotos/' target="_blank" rel='noreferrer'>Instagram</a>, so be sure to follow me to see more what I do.</p>
+          <p className={styles.aboutParagraph}>
+          My camera goes with me most places and I'm always snapping away, affectionately acquiring the nickname "David Bailey" from my family. I often shoot and share my images on social media, and so far they have been used and shared by businesses and individuals locally and further afield, from Cornwall to Croatia!
+          <br/><br/>
+          Capturing candid moments is my absolute favourite; freezing the moments like the uncontrollable laughter between friends, the busy atmosphere of a popular bar or pub, a couple sharing a special moment, or a four-legged friend enjoying a splash in a muddy puddle, is a truly special ability that I love to share.
+          </p>
+        </div>
 
-        <div className="aboutPictures">
-          <img id="ben" src={b3} alt="Ben" />
+        <div className={styles.aboutBonusPics} data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
+          <img src={cologne} alt="Dom in Cologne" className={styles.aboutImage} />
+          <img src={obi} alt="Ben's dog, Obi" className={styles.aboutImage} />
+          <img src={penyfan_desktop} alt="Misty peaks looking from Pen y Fan" className={styles.aboutImage} />
+          <img src={dubrovnik} alt="Kayaking in Dubrovnik" className={styles.aboutImage} />
+        </div>
+
+        <div className={styles.aboutInfo} data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
+          <img className={styles.aboutInfoImage} alt="Ben" src={ben_and_obi} />
+
+          <p className={styles.aboutParagraph}>
+            Exploration is more than half of the fun, for me. I find it fascinating to think about how powerful cameras can be, whether it's something earthly such as a brand's latest product, or our neighbouring galaxy.
+          </p>
+        </div>
+
+        <div className={styles.moreAbout} data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
+          <h4 className={styles.moreAboutHeader}>The Ben behind the camera</h4>
+          <ul className={styles.moreAboutList}>
+            {moreAboutItems.map((item) => {
+              return <li className={styles.moreAboutItem}>{item}</li>
+            })}
+
+            <li className={styles.moreAboutItem}>I brew my own beer, from time to time. I also have a craft beer blog on Instagram <a href="https://www.instagram.com/beer_in_mass/" target="_blank">@beer_in_mass</a></li>
+          </ul>
         </div>
       </Main>
 
+
       <Footer />
     </>
-  );
-};
+  )
+}
 
 export default About;

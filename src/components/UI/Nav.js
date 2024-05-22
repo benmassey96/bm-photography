@@ -1,62 +1,43 @@
-import { Fragment } from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import styles from './Nav.module.css';
+import { useState, Fragment } from "react";
+import { Link } from "react-router-dom";
+import styles from "./Nav.module.css";
+import NavButton from "./NavButton";
 
 const Nav = () => {
-  const [navVisible, setNavVisible] = useState(false);
+  const [showNav, setShowNav] = useState(false);
 
-  const navButtonHandler = () => setNavVisible(!navVisible);
+  const showNavHandler = () => {
+    setShowNav(!showNav)
+  };
+
+  const onNavLinkClick = () => {
+    document.body.style.position = 'static'
+  };
 
   return (
     <>
-      <button className={styles.mobileNavButton} onClick={navButtonHandler}>MENU</button>
-
-      {navVisible && <nav className={styles.mobileNavContainer}>
-        <ul className={styles.mobileNavList}>
-          <li className={styles.mobileNavItem}>
-            <Link to="/">Home</Link>
-          </li>
-          <li className={styles.mobileNavItem}>
-            <Link to="/about">About</Link>
-          </li>
-          {/*Services to add another time
-          <li className={styles.mobileNavItem}>
-            <Link to="/services">Services</Link>
-          </li>
-          */}
-          <li className={styles.mobileNavItem}>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li className={styles.mobileNavItem}>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>}
-
-      <nav className={styles.navContainer}>
-        <ul className={styles.navList}>
-          <li className={styles.navItem}>
-            <Link to="/">Home</Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link to="/about">About</Link>
-          </li>
-          {/*Services to add another time
-          <li className={styles.navItem}>
-            <Link to="/services">Services</Link>
-          </li>
-          */}
-          <li className={styles.navItem}>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+      <nav className={styles.mobileNavContainer}>
+        {
+          showNav && <ul id="mobileNav" className={styles.mobileNav} data-aos="fade-left" data-aos-delay="50" data-aos-duration="500">
+            <Link onClick={onNavLinkClick} to="/" data-aos="fade-left" data-aos-delay="0" data-aos-duration="500">HOME</Link>
+            <Link onClick={onNavLinkClick} to="/about" data-aos="fade-left" data-aos-delay="250" data-aos-duration="500">ABOUT</Link>
+            <Link onClick={onNavLinkClick} to="/services" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">SERVICES</Link>
+            <Link onClick={onNavLinkClick} to="/contact" data-aos="fade-left" data-aos-delay="750" data-aos-duration="500">CONTACT</Link>
+          </ul>
+        }
+        <NavButton onShowNav={showNavHandler} toggled={showNav} />
       </nav>
+
+      <nav className={styles.desktopNavContainer}>
+        <ul id="desktopNav" className={styles.desktopNav}>
+          <Link onClick={onNavLinkClick} to="/">Home</Link>
+          <Link onClick={onNavLinkClick} to="/about">About</Link>
+          <Link onClick={onNavLinkClick} to="/services">Services</Link>
+          <Link onClick={onNavLinkClick} to="/contact">Contact</Link>
+        </ul>
+      </nav> 
     </>
-  );
-};
+  )
+}
 
 export default Nav;

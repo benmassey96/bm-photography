@@ -1,39 +1,55 @@
-import { Fragment, useLayoutEffect } from "react";
-import Nav from './UI/Nav';
-import ContactForm from "./UI/ContactForm";
-import Main from './UI/Main';
-import Footer from "./UI/Footer";
+import { Fragment, useLayoutEffect } from 'react';
 import styles from './Contact.module.css';
-import back from '../images/contactBack.JPG';
+import Header from './UI/Header';
+import Main from './UI/Main';
+import SectionHeader from './UI/SectionHeader';
+import Footer from './UI/Footer';
 
 const Contact = () => {
-
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   });
 
   return (
     <>
-      <Nav />
-      <img src={back} alt="Tiled background" className={styles.background} />
-      <Main>
-        <div className={styles.contactPageContainer}>
-          <h2>Contact</h2>
-          <div class={styles.contact}>
-            <div class={styles.contactText}>
-              <p>Don't hesitate to get in touch if you have something in mind you'd like to discuss.</p>
-              
-              <p>Depending on what you're looking for, I may need to gather some additional information from you to ensure you have the best experience.</p>
+      <Header />
 
-              <p>There's absolutely no obligation for any consultation and I'd love to hear from you.</p>
-            </div>
-            <ContactForm />
-          </div>        
+      <Main>
+        <SectionHeader>Contact</SectionHeader>
+
+        <div className={styles.contact}>
+          <div className={styles.content}>
+            <p>Had a browse and think you'd like to get in touch?</p>
+
+            <p>Feel free to reach out, chances are I'm eagerly awaiting your message. Enquiries are on a totally no-obligation basis</p>
+
+            <a className={styles.contactLink} target="_blank" href="mailto:hello@benmasseyphotos.co.uk?subject=Photography Enquiry">hello@benmasseyphotos.co.uk</a>
+            <a className={styles.contactLink} target="_blank" href="https://www.instagram.com/benmasseyphotos/">Say Hi on Insta</a>
+            <a className={styles.contactLink} target="_blank" href="https://www.facebook.com/share/7ppc5GuhJm4BpCrG/">Take a look at my Facebook</a>
+          </div>
+          
+          <div className={styles.mapContainer}>
+            <p>I'm based in Hereford, but am open to travel. In case you're unsure of where Hereford is...</p>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39255.67250478159!2d-2.7648342072290517!3d52.05279159826687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486fd425aa6e5341%3A0xd59c9a4bfd3c6c96!2sHereford!5e0!3m2!1sen!2suk!4v1700863278606!5m2!1sen!2suk" 
+              className={styles.map}
+              width="100%"
+              height="300"
+              allowFullScreen="" 
+              title='map'
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              data-aos="fade-up"
+              data-aos-delay="0"
+              data-aos-duration="1000">
+            </iframe>
+          </div>
         </div>
       </Main>
+
       <Footer />
     </>
-  );
-};
+  )
+}
 
 export default Contact;

@@ -1,86 +1,47 @@
-.mobileNavButton {
-  padding: 10px;
-  border: 1px solid white;
+.positionFixed {
   position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 12;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.801);
 }
 
-.mobileNavContainer {
-  height: 100%;
-  width: 100%;
-  z-index: 11;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(32, 32, 32, 0.911);
+.desktopNavContainer {
+  display: none;
 }
 
-.mobileNavList {
-  height: 100%;
-  margin: 0;
-  padding: 0 50px;
-  list-style-type: none;
+.mobileNav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-}
-
-.mobileNavItem {
-  margin: 30px 0;
-}
-
-.mobileNavItem a {
-  text-decoration: none;
-  color: white;
-  font-size: 3em;
-}
-
-.navContainer {
+  margin: 0;
+  padding: 10% 10% 10% 0;
   position: fixed;
-  width: 100%;
-  z-index: 20;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
   background-color: white;
 }
 
-.navList {
-  margin: 30px 50px;
-  padding-left: 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end
-}
-
-.navItem {
-  margin-right: 45px;
-}
-
-.navItem a {
+.mobileNav a {
+  font-size: xxx-large;
   text-decoration: none;
+  padding: 25px 0;
   color: black;
-  font-weight: 700;
 }
 
-@media screen and (min-width: 550px) {
-  .mobileNavButton {
+@media only screen and (min-width: 768px) {
+  .mobileNavContainer {
     display: none;
   }
-
-  .navContainer {
+  
+  .desktopNavContainer {
     display: block;
   }
-
-  .navItem a {
+  
+  .desktopNav a {
+    padding: 0 20px;
+    font-size: x-large;
+    font-family: "Playfair Display", serif;
+    text-decoration: none;
     color: black;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .navContainer {
-    display: none;
   }
 }

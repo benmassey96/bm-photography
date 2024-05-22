@@ -1,45 +1,54 @@
-.background {
-  position: fixed;
-  z-index: -10;
-  opacity: 0.08;
+.contact {
+  padding: 20px 0 0 0;
 }
 
-.contactPageContainer {
+.contactLink {
+  display: block;
+  padding: 0;
+  margin: 10px 0;
+  font-size: larger;
+}
+
+.mapContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 1em;
+  padding: 0;
 }
 
-.contactPageContainer h2 {
-  margin-bottom: 0;
+.mapContainer p {
+  display: block;
+  padding: 0;
+  align-self: flex-start;
 }
 
-.contact {
-  width: 100%;
-  display: flex;
-  margin: 5% 0;
+.map {
+  align-self: center;
+  border: none;
 }
 
-.contactText {
-  width: 50%;
-  display: inline;
-}
-
-.contact form {
-  width: 50%;
-}
-
-@media screen and (max-width: 768px) {
+@media only screen and (min-width: 600px) {
   .contact {
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0 0 60px;
+  }
+
+  .contactLink {
+    padding: 0;
+  }
+
+  .content, .mapContainer {
+    padding: 0 5% 0 0;
+  }
+
+  .content {
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
-  .contact form {
-    width: 100%;
-  }
-
-  .contactText {
-    display: block;
-    width: 100%;
+  .mapContainer {
+    margin: 0;
   }
 }
